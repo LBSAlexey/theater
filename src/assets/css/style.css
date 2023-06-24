@@ -1,0 +1,406 @@
+/* настройка шрифтов */
+@font-face {
+  font-family: 'Poppins', sans-serif;  /* название шрифта */
+  src: url("../fonts/Raleway-Light.ttf") format("truetype");   /* путь к файлу со шрифтом */
+  font-style: normal;  /* стиль щрифта */
+  font-weight: normal;  /* толщина шрифта */
+  line-height: 10;  /* отступы между строками */
+  }
+
+  @font-face {
+    font-family: "ComfortaaLight";
+    src: url("../fonts/Comfortaa-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    line-height: 10;
+    } 
+
+body {
+    margin: 0;  /* отступы снаружи */
+    padding: 0;  /* отступы внутри */
+    font-family: 'Poppins', sans-serif;  /* выбор шрифта */
+    font-size: 15px;  /* размер шрифта */
+    line-height: 100px; 
+    letter-spacing: 10;  /* расстояние между буквами */
+    
+}
+  
+*,
+*:before,
+*:after {
+  box-sizing: border-box; /* настройка width, height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* настройка всех тэгов р */
+p {
+  margin: 0;
+  padding: 0;
+  left: 0; /* отступ слева */
+  top: 0; /* отступ справа */
+  line-height: 30px;
+  text-indent: 3em each-line; /* абзацы */
+  text-align: justify; /* выравнивание текста по ширине */
+}
+
+/* настройка контейнера */
+.container {
+  max-width: 1440px;
+  width: 100%;  /* ширина блока */
+  margin: 0 auto; 
+  font-family: 'Poppins', sans-serif;
+
+} 
+
+
+/* ХЭДЭР */
+
+
+/* .top {
+   background-color: black;
+  background-image: url("/src/assets/img/mainPage/header/") cover no-repeat;
+  background-position: center; 
+  height: 800px;
+  padding: 0; 
+}  */
+
+@media screen and (max-width: 576px) {
+  .mainpage_header_inner {
+    max-width: 576px;
+
+  }
+}
+
+.mainpage_header_inner {
+  background-image: url("../img/mainPage/header/header_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 850px;
+}
+
+.nav_menu {
+  display: flex; /* тип размещения блоков */
+  justify-content: space-between; /* ориентация блоков */
+  text-align: center;
+  padding-top: 20px;
+  
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  font-size: 20px;
+}
+
+.logo_img {
+  width: 70px;
+  margin: 0;
+  padding: 0;
+  transition: 2s; /* плавный переход */
+
+}
+
+
+.logo_img img:hover {
+  box-shadow: 0px 0px 15px 1px white; /* тень */
+  transition: 0.1s;
+}
+
+.logo_img img {
+  border-radius: 30px; /* скругление краев */
+
+}
+
+
+.nav_header {
+  position: relative; /* смена типа позиционирования блока */
+  vertical-align: middle; /* выравнивание по вертикали */
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  align-items: center;
+  
+}
+
+.navbar_menu { 
+  display: flex;
+  position: relative;
+  /* display: inline-block; */
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  
+}
+
+.nav_menu li {
+  float: left; /* ориентация контента слева */
+  height: 100%;
+  box-sizing: border-box; /* корректировка размера блока */
+  list-style-type:  none; /* убиирает маркеры */
+  
+}
+
+.nav_header .navbar_menu .nav-item a {
+  text-decoration: none; /* уубирает подчеркивание */
+  padding: 20px;
+  font-size: 25px;
+  color: white;
+  font-family: "ComfortaaLight", sans-serif;
+}
+
+.nav_header .navbar_menu .nav-item a:hover {
+  color: rgb(128, 128, 128);
+}
+
+.info {
+  font-size: 40px;
+  margin-top: 200px;
+  vertical-align: middle;
+  color: white;
+  max-width: 40%;
+  display: flex;
+  flex-wrap: wrap; /* размещение в одну строку или в несколько */
+}
+
+.info h1 {
+  font-size: 60px;
+}
+
+
+
+/* ОПИСАНИЕ ТЕАТРА + ФОТО */
+
+.main_inner {
+  /* background-color: white; */
+  /* background-image: url('img/bg3.jpg'); */
+  background-color: #d5e7ff;
+  background-size:cover;
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(49, 42, 149);
+}
+
+.main_info {
+  margin: 50px 0px;
+  
+}
+
+.main_info .container {
+  padding: 0px 100px;
+}
+
+.info_img {
+  object-fit: cover; /* чтобы не вылезало за рамки блока */
+  width: 400px;
+  height: 600px;
+}
+
+.info_text, .info_img {
+  color: black;
+  background-color: rgb(0, 0, 0, 0.05);
+  max-width: 400px;
+  height: 600px;
+  overflow: hidden;  /* порядок наложения */
+  line-height: 30px;
+  text-indent: 3em each-line;
+  /* background-color: #f3f3f3; */
+}
+
+.info_text .col {
+  padding: 50px;
+}
+
+
+/* СЕКЦИЯ СО СПЕКТАКЛЯМИ */
+
+.perf_inner {
+  background-color: rgb(23, 22, 22);
+  border-top: 2px solid white;
+  /* background-image: url('img/bg.jpg'); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.perf_title {
+  margin-bottom: 20px;
+  /* font-family: "ComfortaaLight"; */
+  font-size: 40px;
+  text-align: Center;
+  color: white;
+
+}
+
+.perf1, .perf2, .perf3 {
+  background-color: rgb(23, 22, 22);
+  max-width: 250px;
+  height: 390px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+
+.perf_label {
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  /* font-family: "ComfortaaLight"; */
+  font-size: 25px;
+  color: #f7f7f7;
+}
+
+.perf_img {
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 200px;
+  height: 300px;
+  justify-content: center;
+
+}
+
+/* СЕКЦИЯ С АКТЕРАМИ  */
+
+.actors_inner {
+  background-color: rgb(253, 253, 253);
+  /* background-image: url('img/bg.jpg'); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.actors_title {
+  margin-bottom: 20px;
+  font-family: "ComfortaaLight";
+  font-size: 40px;
+  text-align: Center;
+  color: black;
+
+}
+
+.actor {
+  height: 200px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.actor_img {
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+}
+
+.actor_name {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "ComfortaaLight";
+  font-size: 15px;
+  color: rgb(71, 71, 71);
+}
+
+
+/* ФУТЕР */
+
+.footer_inner {
+  background-color: black;
+  color: white;
+  border-top: 2px solid white;
+  font-size: 20px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  font-family: "ComfortaaLight";
+}
+
+.footer_inner .container .row .col{
+  vertical-align: middle;
+  max-width: 500px;
+}
+
+.footer_inner .container {
+  /* margin-top: 100px; */
+  padding-top: 15px;
+}
+
+.footer_laber {
+  font-size: 25px;
+}
+
+.schedule_title, .contacts_title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer_schedule, .footer_contacts {
+  font-size: 15px;
+  max-width: 600px;
+}
+
+.footer_schedule p {
+  margin: 3px;
+  
+}
+
+.footer_contacts p {
+  margin: 3px;
+}
+
+.contacts_text  {
+  font-size: 17px;
+}
+
+  /* .social_media {
+    padding: 5px;
+  } */
+
+.col .media {
+  width: 30px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.media img {
+  width: 50px;
+}
+
+.media_label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer_map {
+  position: relative;
+  top: -45px;
+  
+  width: 300px;
+  height: 300px;
+}
+
+.map {
+  margin-left: auto;
+  margin-right: auto;
+}
