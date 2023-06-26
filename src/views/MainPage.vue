@@ -1,5 +1,43 @@
 <script>
+import axios from 'axios';
 
+export default {
+    data() {
+        return {
+            performance: [],
+            loading: true,
+        }
+    },
+
+    mounted() {
+        this.loadPerformance();
+    },
+
+    methods: {
+        actorsPage() {
+            this.$router.push({
+                name: 'actors'
+            });
+        },
+
+        performancePage(item) {
+            this.$router.push({
+                name: 'performance',
+                params: {
+                    title: item.title
+                }
+            })
+        },
+
+        async loadPerformance() {
+            let response = await axios.get('/performance');
+
+            this.performance = response.data;
+            this.loading = false;
+        },
+    },
+
+}
 
 
 </script>
@@ -30,7 +68,7 @@
                         <a class="nav-link" href="#" onclick="slowScroll('.perf_inner')">Спектакли</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#" >Актеры</a>
+                        <a class="nav-link" href="#" @click="actorsPage">Актеры</a>
                       </li>
                     </ul>
 
@@ -122,19 +160,9 @@
     <div class="container">
         <h2 class="perf_title">Спектакли</h2>
         <div class="row">
-            <div class="col perf1">
-                <img class="perf_img" src="/src/assets/img/mainPage/performances/shagren/shagren.jpg" alt="Фото спектакля">
-                <a class="perf_label" href="performance1.html">Шагреневая Кожа</a>
-            </div>
-
-            <div class="col perf2">
-                <img class="perf_img" src="/src/assets/img/mainPage/performances/lir/lir.jpg" alt="Фото спектакля">
-                <a class="perf_label" href="performance2.html">Король Лир</a>
-            </div>
-
-            <div class="col perf3">
-                <img class="perf_img" src="/src/assets/img/mainPage/performances/idiot/idiot.jpg" alt="Фото спектакля">
-                <a class="perf_label" href="performance3.html">Идиот</a>
+            <div class="col perf" v-for="(item, index) in performance" @click="performancePage(item)">
+                <img class="perf_img" :src="item.photo[0]" alt="Фото спектакля">
+                <a class="perf_label">{{ item.title }}</a>
             </div>
         </div>
     </div>
@@ -145,5 +173,7 @@
 </template>
 
 <style>
-
+    .perf_label {
+        cursor: pointer;
+    }
 </style>

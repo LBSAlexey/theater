@@ -131,7 +131,7 @@ p {
   }
   
 
-  .header_title {
+  .header_title_actors {
     margin-top: 70px;
     text-align: center;
     font-size: 80px;
@@ -147,9 +147,9 @@ p {
 
 /* СЕКЦИЯ АКТЕРЫ ТЕАТРА  */
 
-.actors_inner {
+/* .actors_inner {
     background-color: rgb(253, 253, 253);
-    /* background-image: url('img/bg.jpg'); */
+    background-image: url('img/bg.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,20 +166,25 @@ p {
   
   }
   
-  .actor {
+  */
+
+
+  /* .actor {
     height: 220px;
-    width: 150px;
+    width: 400px;
     background-color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
   
   .actor_img {
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 120px;
+    width: 400px;
     height: 160px;
     justify-content: center;
   }
@@ -190,7 +195,19 @@ p {
     font-family: "ComfortaaLight";
     font-size: 15px;
     color: rgb(71, 71, 71);
+    cursor: pointer;
   }
+  
+  .actor .actor_name {
+    position: relative; 
+    right: 100px;
+    top: 130px;
+    z-index: 1;
+  }
+
+  .actor .actor_image{ 
+    position: absolute;
+  } */
   
 
 

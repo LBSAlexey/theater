@@ -44,12 +44,12 @@ p {
 /* ХЭДЭР */
 
 .performancepage_header_inner {
-  background-image: url("../img/actorsPage/header/header_img_lol.jpg");
+  background-image: url("../img/personalPage/header/personal.jpg");
   background-position: center;/* размещение фона */
   background-size: cover;/* размещение фона */
   background-size: no-repeat;/* размещение фона */
   /* background-position-y: -100px; */
-  height: 500px;
+  height: 600px;
   /* padding: 20px; */
 } 
   
@@ -130,8 +130,8 @@ p {
   }
   
 
-  .header_title {
-    margin-top: 70px;
+  .header_title_personal {
+    margin-top: 150px;
     text-align: center;
     font-size: 80px;
     color: white;
@@ -166,11 +166,16 @@ p {
     padding: 0px 100px;
   }
   
-  .actor_img {
+  /* .actor_img {
     object-fit: cover;
-    max-width: 300px;
+    max-width: 600px;
     height: 400px;
   }
+
+  .actor_block {
+    max-width: 600px;
+    height: 400px;
+  } */
 
 .spec_inner {
     margin-bottom: 40px;

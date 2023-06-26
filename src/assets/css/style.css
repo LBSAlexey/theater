@@ -244,7 +244,7 @@ p {
 
 }
 
-.perf1, .perf2, .perf3 {
+.perf {
   background-color: rgb(23, 22, 22);
   max-width: 250px;
   height: 390px;
@@ -252,7 +252,6 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
 }
 
 
@@ -263,6 +262,7 @@ p {
   /* font-family: "ComfortaaLight"; */
   font-size: 25px;
   color: #f7f7f7;
+
 }
 
 .perf_img {
@@ -273,6 +273,10 @@ p {
   height: 300px;
   justify-content: center;
 
+}
+
+.perf_label, .perf_img {
+  cursor: pointer;
 }
 
 /* СЕКЦИЯ С АКТЕРАМИ  */
@@ -287,7 +291,16 @@ p {
   margin-top: 50px;
 }
 
+.row-actors {
+  gap: 30px;
+  justify-content: center;
+  background-color: rgb(214, 214, 214);
+
+}
+
 .actors_title {
+  background-color: rgb(214, 214, 214);
+
   margin-bottom: 20px;
   font-family: "ComfortaaLight";
   font-size: 40px;
@@ -297,29 +310,38 @@ p {
 }
 
 .actor {
-  height: 200px;
-  width: 150px;
-  background-color: white;
+
+  height: 250px;
+  width: 170px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+
 }
 
 .actor_img {
+  /* position: absolute; */
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 300px;
   justify-content: center;
 }
 
 .actor_name {
+  /* position: relative;  */
+  /* right: 100px; */
+  /* top: 130px; */
+  z-index: 1;
   margin-top: 10px;
-  text-align: center;
+  /* text-align: center; */
   font-family: "ComfortaaLight";
   font-size: 15px;
   color: rgb(71, 71, 71);
+  cursor: pointer;
 }
 
 

@@ -193,9 +193,9 @@ color: #f7f7f7;
 
 /* АКТЕРЫ ИЗ СПЕКТАКЛЯ  */
 
-.actors_inner {
+/* .actors_inner {
   background-color: rgb(253, 253, 253);
-  /* background-image: url('img/bg.jpg'); */
+  background-image: url('img/bg.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,9 +210,9 @@ color: #f7f7f7;
   text-align: Center;
   color: black;
 
-}
+} */
 
-.actor {
+/* .actor {
   height: 220px;
   width: 150px;
   background-color: white;
@@ -236,7 +236,7 @@ color: #f7f7f7;
   font-family: "ComfortaaLight";
   font-size: 15px;
   color: rgb(71, 71, 71);
-}
+} */
 
 /* ФУТЕР */
 
