@@ -24,16 +24,22 @@ export default {
             });
             try {
                 this.actor = response.data
-
             } catch (e) {
-                console.log(response.data)
+                console.log(e)
             }
         },
 
         getDate(date) {
             let day = dayjs(date);
             return day.format('DD.MM.YYYY');
-        }
+        },
+
+        mainPage() {
+      this.$router.push({
+        name: 'main'
+      })
+    },
+
     },
 
 }
@@ -59,7 +65,7 @@ export default {
 
                         </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Главная</a>
+                        <a class="nav-link" aria-current="page" href="#" @click="mainPage">Главная</a>
                       </li>
                       <!-- <li class="nav-item">
                         <a class="nav-link" href="#">О театре</a>
@@ -77,7 +83,7 @@ export default {
               </nav>
 
                 <h1 class="header_title_personal">
-                    {{ actor.name.firstName }} {{ actor.name.lastName }}
+                    {{ actor.fullName }}
                 </h1>
         </div>
     </header>
@@ -96,15 +102,15 @@ export default {
                         </div>
                         <div class="spec_inner">
                             <h4 class="actor_spec">Увлечения</h4>
-                            <p class="actor_spec">{{ actor.info.hobbies }}</p>
+                            <p class="actor_spec">{{ actor.info}}</p>
                         </div>
                         <div class="spec_inner">
                             <h4 class="actor_spec">Комментарии</h4>
-                            <p class="actor_spec">{{ actor.info.comment }}</p>
+                            <p class="actor_spec">{{ actor.info }}</p>
                         </div>
                         <div class="spec_inner">
                             <h4 class="actor_spec">Роли</h4>
-                            <p class="actor_spec">{{ actor.info.role }}</p>
+                            <p class="actor_spec">{{ actor.info }}</p>
                         </div>
                         
                     </div>

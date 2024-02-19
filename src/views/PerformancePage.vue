@@ -124,6 +124,14 @@ export default {
 
 <style>
 
-
+.performancepage_header_inner{
+  background-image: url("../assets/img/personalPage/header/personal.jpg");
+  background-position: center;/* размещение фона */
+  background-size: cover;/* размещение фона */
+  background-size: no-repeat;/* размещение фона */
+  /* background-position-y: -100px; */
+  height: 600px;
+  /* padding: 20px; */
+}
 
 </style>

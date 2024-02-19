@@ -4,6 +4,7 @@ import MainPage from './views/MainPage.vue';
 import ActorsPage from './views/ActorsPage.vue';
 import PerformancePage from './views/PerformancePage.vue';
 import PersonalPage from './views/PersonalPage.vue';
+import AuthorizationPage from './views/AuthorizationPage.vue'
 
 export default createRouter({
     // История переходов сохраняется
@@ -31,6 +32,11 @@ export default createRouter({
             name: 'personal',
             path: '/actors/personal/:id',
             component: PersonalPage
+        },
+        {
+            name: 'singUp',
+            path: '/singup',
+            component: AuthorizationPage
         }
 
     ]

@@ -35,6 +35,12 @@ export default {
             this.performance = response.data;
             this.loading = false;
         },
+
+        authorizationPage() {
+            this.$router.push({
+                name: 'singUp'
+            })
+        }
     },
 
 }
@@ -71,6 +77,11 @@ export default {
                         <a class="nav-link" href="#" @click="actorsPage">Актеры</a>
                       </li>
                     </ul>
+                    <div class="navbar-nav">
+                        <span class="navbar-text">
+                            <a class="nav-link" href="#" @click="authorizationPage">Войти</a>
+                        </span>
+                    </div>
 
                   </div>
                 </div>
